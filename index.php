@@ -61,20 +61,22 @@ require_once 'php/form.php';
             <li>3</li>
         </ul>
     </div>
+    <div class="images">
+        <?php
+        $imgs = mysqli_query($connect, "SELECT * FROM `imgs`");
+        while ($res = mysqli_fetch_assoc($imgs)) {
+        ?>
+            <img class="img1" src="img/<?= $res['image']; ?>">
+        <?php
+        }
+        ?>
+    </div>
+
+    </div>
     <div class="imgs">
         <button class="btn-ya">
             <a href="https://dzen.ru/?yredirect=true">Яндекс</a>
         </button>
-        <div class="images">
-            <?php
-            $imgs = mysqli_query($connect, "SELECT * FROM `imgs`");
-            while ($res = mysqli_fetch_assoc($imgs)) {
-            ?>
-                <img class="img1" src="img/<?= $res['image']; ?>">
-            <?php
-            }
-            ?>
-        </div>
     </div>
     <div class="form">
         <form class="info" action="/php/form.php" method="post">
@@ -84,8 +86,6 @@ require_once 'php/form.php';
             <input type="text" name="phone">
             <label for="email">Email</label>
             <input type="email" name="email">
-            <!-- <label for="img">Картинка</label>
-            <input type="file" name="img"> -->
             <label for="message">Сообщение</label>
             <textarea name="text" cols="30" rows="10"></textarea>
             <button type="submit">Отправить</button>
@@ -228,8 +228,15 @@ require_once 'php/form.php';
     </div>
     <div class="black-nout">
         <div class="video">
-            <iframe class="video1" width="560" height="315" src="https://www.youtube.com/embed/YPRaA6KhyXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button class="btn-video">Видео</button>
+            <div class="pop_up" id="pop_up">
+                <div class="pop_up_container">
+                    <div class="pop_up_body">
+                        <iframe class="video1" width="560" height="315" src="https://www.youtube.com/embed/YPRaA6KhyXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="pop_up_close" id="pop_up_close">&#10006</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-video" id="open_pop_up">Видео</button>
         </div>
         <div class="map">
             <iframe class="map1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9765.929825730727!2d104.2612773!3d52.2709426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x368423aaef9b2b13!2z0JjRgNC60YPRgtGB0LrQuNC5INCz0L7RgdGD0LTQsNGA0YHRgtCy0LXQvdC90YvQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC_0YPRgtC10Lkg0YHQvtC-0LHRidC10L3QuNGP!5e0!3m2!1sru!2sru!4v1664010109395!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
