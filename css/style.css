@@ -1,0 +1,261 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 15px;
+    margin-bottom: 20px;
+    animation: right 1s;
+}
+@keyframes right {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+th, td {
+    border: 1px solid black;
+}
+th, td:nth-child(odd) {
+    background-color: blue;
+}
+th, td:nth-child(even) {
+    background-color: gray;
+}
+
+td {
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 14px;
+    list-style-image: url(/img/love.png);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #ff6464;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: gray;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+    animation: wipe-enter 1s;
+}
+
+form label {
+    margin-bottom: 15px;
+}
+form input {
+    margin-bottom: 30px;
+    border: solid 2px blue;
+    border-radius: 15px;
+    color: cadetblue;
+    font-size: 20px;
+    padding: 5px;
+}
+form textarea {
+    margin-bottom: 30px;
+    border: solid 2px blue;
+    border-radius: 15px;
+    color: cadetblue;
+    font-size: 20px;
+    padding: 5px;
+}
+form button {
+    background-color: #fff;
+    color: black;
+    font-size: 30px;
+    border: solid 2px black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: blue;
+    color: white;
+    border: solid 2px white;
+    border-radius: 50px;
+}
+
+.ol {
+    display: flex;
+    justify-content: center;
+}
+
+.ol li {
+    padding-right: 30px;
+}
+.ol li:hover {
+    color: aqua;
+}
+.btn-ya {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: black;
+    border: none;
+}
+.btn-ya:hover {
+    background-color: #fff;
+    color: black;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+.btn-ya a {
+    text-decoration: none;
+    color: white;
+}
+.btn-ya:hover a {
+    color: black;
+}
+.btn-ya a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+.images img {
+    width: 150px;
+    height: 150px;
+}
+.img1 {
+    opacity: 0.5;
+}
+.ya {
+    background: url(/img/ya.png) no-repeat 50% 50%;
+}
+.ya:hover {
+    background: url(/img/yah.png) no-repeat 50% 50%;
+}
+.img3 {
+    transform: rotate(180deg);
+}
+
+.titles {
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+    font-size: 30px;
+    animation: wipe-enter 1s;
+}
+@keyframes wipe-enter {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+  }
+
+.first-h1 {
+    color: aqua;
+    text-transform: uppercase;
+}
+.second-h2 {
+    color: black;
+}
+.second-h2 span {
+    color: #ff646464;
+}
+.third-h3 {
+    color: blue;
+    animation: blink 2s linear infinite;
+}
+@keyframes blink {
+    50% { color: rgb(34, 34, 34); }
+    51% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 0); }
+  }
+.fouth-h4 {
+    color: blueviolet;
+}
+.fives-h5 {
+    color: brown;
+}
+
+.otvet {
+    background-color: blue;
+    border: dashed yellow;
+    padding: 10px 15px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0px;
+}
+.btn-video {
+    width: 200px;
+    height: 50px;
+    margin: 20px 0px;
+    background-color: #fff;
+    border: solid 2px black;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 1365px) {
+    .titles {
+        background-color: #fff8dc;
+    }
+    table {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+    th, td {
+        border-spacing: 0;
+    }
+    td {
+        padding: 5px;
+    }
+    .black-nout {
+        background-color: #000;
+    }
+    .map {
+        width: 100%;
+    }
+    .map1 {
+        width: 90%;
+    }
+    .video {
+        width: 100%;
+    }
+    .video1 {
+        width: 90%;
+    }
+    .imgs {
+        width: 100%;
+    }
+    .images {
+        width: 90%;
+    }
+    .titles {
+        margin-top: 0;
+    }
+}
+@media (max-width: 767px) {
+    .titles {
+        background-color: #30d5c8;
+    }
+}
+@media (min-width: 1365px) {
+
+}
