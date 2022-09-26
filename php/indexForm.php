@@ -14,11 +14,11 @@ require_once 'form.php';
 </head>
 
 <body>
+    <span class="adminFormSpan">Все формы</span>
     <?php
     $form = mysqli_query($connect, "SELECT * FROM `form`");
     while ($resForm = mysqli_fetch_assoc($form)) {
     ?>
-        <span class="adminFormSpan">Все формы</span>
         <div class="adminForm__container">
             <form class="adminForm" action="" method="post">
                 <label for="name">Имя</label>
