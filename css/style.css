@@ -95,6 +95,20 @@ ul {
     border-radius: 50px;
 }
 
+.btn-bc {
+    margin: 30px auto 15px auto;
+    padding: 10px;
+    font-size: 25px;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn-bc:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 .ol {
     display: flex;
     justify-content: center;
@@ -132,10 +146,6 @@ ul {
     color: black;
 }
 
-.images {
-    display: flex;
-    justify-content: center;
-}
 .images img {
     width: 150px;
     height: 150px;
@@ -147,50 +157,27 @@ ul {
 .container {
     max-width: 700px;
     margin: 0 auto;
-  }
+}
 
-  .slider__container {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.slider__container {
+    margin: 30px auto;
+}
 
-  .slider__items {
-    counter-reset: slide;
-  }
-
-  .slider__item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    counter-increment: slide;
-    height: 250px;
+.slider {
+    width: 150px;
+    height: 150px;
+    margin: 30px auto;
+    border: solid 2px black;
+    overflow: hidden;
+}
+.images {
+    height: 150px;
+    width: 1024px;
     position: relative;
-  }
-
-  .slider__item::before {
-    content: counter(slide) "/3";
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #fff;
-    font-style: italic;
-    font-size: 32px;
-    font-weight: bold;
-    display: block;
-  }
-
-  .slider__item:nth-child(1) {
-    background-color: #f44336;
-  }
-
-  .slider__item:nth-child(2) {
-    background-color: #9c27b0;
-  }
-
-  .slider__item:nth-child(3) {
-    background-color: #3f51b5;
-  }
+    display: flex;
+    left: 0;
+    transition: all ease 1s;
+}
 
 .titles {
     text-align: center;

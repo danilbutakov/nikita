@@ -61,15 +61,37 @@ require_once 'php/form.php';
             <li>3</li>
         </ul>
     </div>
-    <div class="images">
-        <?php
-        $imgs = mysqli_query($connect, "SELECT * FROM `imgs`");
-        while ($res = mysqli_fetch_assoc($imgs)) {
-        ?>
-            <img class="img1" src="img/<?= $res['image']; ?>">
-        <?php
-        }
-        ?>
+    <div class="slider__container">
+        <div class="slider">
+            <div class="images">
+                <?php
+                $imgs = mysqli_query($connect, "SELECT * FROM `imgs` WHERE `id` = 1");
+                while ($res = mysqli_fetch_assoc($imgs)) {
+                ?>
+                    <img class="img1" src="img/<?= $res['image']; ?>">
+                <?php
+                }
+                ?>
+                <?php
+                $imgs = mysqli_query($connect, "SELECT * FROM `imgs` WHERE `id` = 2");
+                while ($res = mysqli_fetch_assoc($imgs)) {
+                ?>
+                    <img class="img1" src="img/<?= $res['image']; ?>">
+                <?php
+                }
+                ?>
+                <?php
+                $imgs = mysqli_query($connect, "SELECT * FROM `imgs` WHERE `id` = 3");
+                while ($res = mysqli_fetch_assoc($imgs)) {
+                ?>
+                    <img class="img1" src="img/<?= $res['image']; ?>">
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+        <button class="slider-prev">Prev</button>
+        <button class="slider-next">Next</button>
     </div>
 
     </div>
@@ -83,13 +105,14 @@ require_once 'php/form.php';
             <label for="name">Имя</label>
             <input type="text" name="name">
             <label for="number">Телефон</label>
-            <input type="text" name="phone">
+            <input type="text" name="phone" class="tel" value="">
             <label for="email">Email</label>
             <input type="email" name="email">
             <label for="message">Сообщение</label>
             <textarea name="text" cols="30" rows="10"></textarea>
-            <button type="submit">Отправить</button>
+            <button id="btn-submit" type="submit">Отправить</button>
         </form>
+        <button class="btn-bc">Поменять цвет фона формы</button>
     </div>
     <div class="tables">
         <table>
