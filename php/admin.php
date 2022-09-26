@@ -14,6 +14,7 @@ require_once 'connect.php';
 </head>
 
 <body>
+    <h1>Редактирование заголовка</h1>
     <?php
     $sql = mysqli_query($connect, "SELECT * FROM `titles`");
     $resTitle = mysqli_fetch_assoc($sql);
