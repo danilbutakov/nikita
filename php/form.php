@@ -10,5 +10,5 @@ $text = $_POST['text'];
 
 if (isset($name, $phone, $email, $text)) {
     mysqli_query($connect, "INSERT INTO `form`(`id`, `name`, `phone`, `email`, `text`) VALUES (NULL, '$name', '$phone', '$email', '$text')");
+    Header('Location: ../index.php');
 }
-Header("Location: ../index.php");
